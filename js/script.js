@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: "Грайливий опозиціонер", value: +temp['Грайливий опозиціонер'] },
           ];
 
+          console.log(data);
+
           function createDiagram(){
             let colors = [
               "#1f77b4",

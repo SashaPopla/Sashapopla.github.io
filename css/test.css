@@ -30,6 +30,11 @@ input[type="text"]{
     font-size: 18px;
 }
 
+input[type="radio"]{
+    width: 21px;
+    height: 21px;
+    margin-top: 2px;
+}
 input{
     border: 1px solid black;
     
