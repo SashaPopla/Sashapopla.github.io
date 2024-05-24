@@ -1,10 +1,20 @@
 "use strict";
 
-document.querySelector("form").addEventListener("submit", async (e) => {
+document.querySelector('form').addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
+
+  let personalCode = formData.get("entry.995532285");
+  console.log('Value of entry.995532285:', personalCode);
+
+  const personalCodePattern = /^[a-zA-Z][a-zA-Z][a-zA-Z]\d{2}\d{2}[a-zA-Z]$/;
+
+  if (!personalCodePattern.test(personalCode)) {
+    alert("Персональний шифр має неправильний формат. Перевірте порядок формування.");
+    return;
+  }
 
   try {
     const response = await fetch(form.action, {
@@ -13,11 +23,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
       mode: "no-cors",
     });
 
-    if (response) {
-      window.location.href = "diagrame.html";
-    } else {
-      alert("Виникла помилка при відправці даних.");
-    }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    window.location.href = "diagrame.html";
+    
   } catch (error) {
     console.error("Error:", error);
     alert("Виникла помилка при відправці даних.");
