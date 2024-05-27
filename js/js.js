@@ -9,7 +9,7 @@ document.querySelector('form').addEventListener("submit", async (e) => {
   let personalCode = formData.get("entry.995532285");
   console.log('Value of entry.995532285:', personalCode);
 
-  const personalCodePattern = /^[a-zA-Z][a-zA-Z][a-zA-Z]\d{2}\d{2}[a-zA-Z]$/;
+  const personalCodePattern = /^[а-яА-ЯЁёЇїІіЄєҐґ][а-яА-ЯЁёЇїІіЄєҐґ][а-яА-ЯЁёЇїІіЄєҐґ]\d{2}\d{2}[а-яА-ЯЁёЇїІіЄєҐґ]$/;
 
   if (!personalCodePattern.test(personalCode)) {
     alert("Персональний шифр має неправильний формат. Перевірте порядок формування.");
