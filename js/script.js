@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Визначення ширини, висоти та відступів
             let width = 800;
             let height = 500;
-            let margin = { top: 60, right: 30, bottom: 2000, left: 80 };
+            let margin = { top: 60, right: 30, bottom: 2000, left: 180 };
           
             // Створення SVG елементу
             let svg = d3
