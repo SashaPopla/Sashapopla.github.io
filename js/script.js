@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ];
 
               let width = 800;
-              let height = 500;
+              let height = 650;
               let margin = { top: 60, right: 30, bottom: 2000, left: 180 };
 
               let svg = d3
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .style("text-anchor", "end")
                 .style("font-size", "18px");
 
-              let y = d3.scaleLinear().domain([0, 10]).range([height, 0]);
+              let y = d3.scaleLinear().domain([0, 12]).range([height, 0]);
 
               svg.append("g").call(d3.axisLeft(y));
 

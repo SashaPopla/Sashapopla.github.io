@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест Джойса</title>
-     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
@@ -25,7 +25,7 @@
             <li><a href="#">Котакти</a></li>
             <li><a href="#">Зворотній зв'язок</a></li>
             <li><a href="#">Про нас</a></li>
-            <li><a href="#">Показ даних</a></li>
+            <li><a href="#" class="loginLink">Показ даних</a></li>
         </ul>
     </nav>
 
@@ -102,18 +102,49 @@
         </div>
     </footer>
 
-    <div class="model-window">
-        <form action="#" method="post">
-            <div>
-                <label for="name"></label>
-                <input type="text" name="name" id="name">
-            </div>
-
-            <div>
-                <label for="pass"></label>
-                <input type="password" name="pass" id="pass">
-            </div>
-        </form>
+    <div class="model">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+              <label for="username">Логін:</label>
+              <input type="text" id="username" name="username">
+              <label for="password">Пароль:</label>
+              <input type="password" id="password" name="password">
+              <input type="submit" value="Увійти">
+            </form>
+          </div>
     </div>
+
+    <script>
+        let login = 'admin',
+            pass = 'admin2024';
+
+        let closeBtn = document.querySelector('.close');
+
+        closeBtn.addEventListener('click', function() {
+            let modal = document.querySelector('.model');
+            modal.style.display = 'none';
+        });
+
+        document.querySelector('.loginLink').addEventListener('click', (e)=>{
+            e.preventDefault();
+            let modal = document.querySelector('.model');
+            modal.style.display = 'block';
+        });
+
+        document.querySelector('#loginForm').addEventListener('submit', (e)=>{
+            e.preventDefault(); 
+
+            let username = document.querySelector('#username').value;
+            let password = document.querySelector('#password').value;
+
+            if(login == username && pass == password){
+                window.location.href = "./html/data.html";
+            }
+            else{
+                alert('Error!');
+            }
+        });
+    </script>
 </body>
 </html>
