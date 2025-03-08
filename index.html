@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоди</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div id="search">
+            <input type="text" id="city-input" placeholder="Введіть місто">
+            <button id="search-btn">Знайти</button>
+        </div>
+    </header>
+
+    <section class="info-city">
+        <div class="container">
+            <div id="city"></div>
+            <div class="text">
+                <p>Показ на тиждень</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <h1>Прогноз погоди</h1>
+            <div class="weather-container" id="weather-container"></div>
+        </div>
+    </section>
+
+    <div id="detailed-weather">
+        <h3 id="detailed-day"></h3>
+        <div id="hourly-weather"></div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

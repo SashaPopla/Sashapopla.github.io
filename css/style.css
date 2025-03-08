@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00796b;
+}
+
+.header{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 20px;
+    height: 125px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#city-input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+#search-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+.info-city .container{
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#city > h2{
+    font-style: normal;
+    font-weight: 300;
+    color: gray;
+}
+
+#city h2 span{
+    font-weight: 600;
+    color: black;
+}
+
+.text p{
+    font-style: normal;
+    font-weight: 300;
+    color: gray;
+}
+
+.main .container {
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.weather-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.weather-day {
+    background: #eceff1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.weather-day h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #00796b;
+}
+
+.weather-day p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+#detailed-weather {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    background: #ffffff;
+    transition: all 0.5s ease;
+}
+
+#detailed-weather:hover {
+    cursor: pointer;
+}
+
+.collapsed {
+    padding: 10px;
+    height: 40px;        
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#hourly-weather {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hour-block img{
+    width: 65px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hour-block {
+    padding: 10px;
+    background: #eceff1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.hour-block p {
+    margin: 5px 0;
+}
