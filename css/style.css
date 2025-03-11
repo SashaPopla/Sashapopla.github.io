@@ -30,22 +30,30 @@ h1 {
 }
 
 #city-input {
-    padding: 10px;
+    padding: 0px;
     width: 250px;
     margin-right: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+}
+
+#city-input:focus{
+    outline: none;
 }
 
 #search-btn {
     padding: 10px 15px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #00796b;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 #search-btn:hover {
-    background-color: #0056b3;
+    background-color: #327c73be;
 }
 
 .info-city .container{

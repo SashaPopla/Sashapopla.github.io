@@ -27,6 +27,7 @@ export const translations = {
     'Squall': 'Шквал',
     'Tornado': 'Торнадо',
     'Light shower rain': 'Легкий зливовий дощ',
+    'Heavy shower rain': 'Сильний зливовий дощ',
     'Zhytomyr' : 'Житомир'
 };
 
